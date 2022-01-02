@@ -1,0 +1,40 @@
+<style>
+  .finished {
+    visibility: hidden;
+  }
+
+  .imageWidth {
+    min-width: 1200px;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .colunn {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
+
+<div class="finished" id="done-div">Done!</div>
+
+<button id="start-button" onClick="startCroquis()" >Start croquis</button>
+<button id="pause-button" onClick="pauseCroquis()" >Pause</button>
+<button id="stop-button" onClick="stopCroquis(true)">Stop</button>
+<button id="next-button" onClick="skipImage()">Next image</button>
+<button id="clear-localstorage-button" onClick="clearLocalstorage()">Clear localstorage</button>
+
+
+<div class="row">
+  <div class="imageWidth">
+    <img id="current-croquis-images" />
+  </div>
+  <div class="column">
+    <div id="break-countdown"></div>
+    <div id="session-info"></div>
+  </div>
+</div>
+
+
+<script src="/js/croquis.js"></script>
